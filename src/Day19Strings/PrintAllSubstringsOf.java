@@ -2,7 +2,7 @@ package Day19Strings;
 
 public class PrintAllSubstringsOf {
     public static void main(String[] args) {
-        String s = "amit";
+        String s = "ammit";
 
         int n = s.length();
         for (int i = 0; i < n; i++) {
