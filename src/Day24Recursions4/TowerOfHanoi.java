@@ -2,13 +2,13 @@ package Day24Recursions4;
 
 public class TowerOfHanoi {
     public static void main(String[] args) {
-        hanoi(5,'A','B','C');
+        hanoi(1,'A','B','C');
     }
 
     private static void hanoi(int n, char a, char b, char c) {
         if(n==0) return;  // base
 
-        // take n-1 discs from src to dest vis helper
+        // take n-1 discs from src to dest via helper
         hanoi(n-1,a,c,b);
 
         // largest from src to dest;
