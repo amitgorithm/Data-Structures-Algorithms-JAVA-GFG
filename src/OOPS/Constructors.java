@@ -8,6 +8,13 @@ public class Constructors {
         Car(){ // default constructor
 
         }
+
+        Car(int seats, String name){
+            this.seats = seats;
+            this.name = name;
+
+        }
+
         Car(int x, String s, double d) { // parameterised constructor
             seats = x;
             name = s;
@@ -23,7 +30,8 @@ public class Constructors {
 
 
         void print(){
-            System.out.println(seats+ " "+ name+" "+length+"m ");
+            int seats = 5;
+            System.out.println(this.seats+ " "+ name+" "+length+"m ");
         }
     }
     public static int max(int a, int b){
@@ -34,6 +42,10 @@ public class Constructors {
     }
 
     public static void main(String[] args) {
+        Car c5 = new Car(4,"XUV");
+        c5.print();
+
+
         Car c1 = new Car(5,"Kia Sonnet",3.99);
         c1.print();
         Car c2 = new Car(4,"Lord Alto",3.75);
