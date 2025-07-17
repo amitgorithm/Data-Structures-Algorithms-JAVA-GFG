@@ -5,6 +5,9 @@ class Student{ // my own data type
     String name;
     int rno;
     double cgpa;
+    void print (){
+        System.out.println(name+" "+rno+" "+cgpa+" ");
+    }
 }
 
 public class UserDefinedDataTypes {
@@ -31,6 +34,10 @@ public class UserDefinedDataTypes {
         System.out.println("name1" + s1.name + "name2 " + s2.name);
         s3.cgpa = 4;
         System.out.println(s3.cgpa);
+
+        s1.print();
+        s2.print();
+        s3.print();
 
     }
 }
