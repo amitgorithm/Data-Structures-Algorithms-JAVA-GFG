@@ -2,14 +2,7 @@ package LinkedList;
 
 import java.util.Scanner;
 
-class Node{
-    int val;
-    Node next;
-    Node(int val){
-        this.val = val;
 
-    }
-}
 public class DisplayList {
     public static void displayRecursively(Node head){
         if(head==null) return;
@@ -35,13 +28,21 @@ public class DisplayList {
         Node d = new Node(40);
         Node e = new Node(50);
         Node f = new Node(5);
-
-
         // to connect the values and nodes:
         a.next = b; b.next = c;
         c.next = d; d.next = e;
-        display(a);
-        displayRecursively(a);
 
+//        display(a);
+//        displayRecursively(a);
+        System.out.println(get(a,2));
+
+    }
+
+    public static int get(Node head, int idx){
+         Node temp = head;
+        for(int i=1;i<=idx;i++){
+            temp = temp.next;
+        }
+        return temp.val;
     }
 }
