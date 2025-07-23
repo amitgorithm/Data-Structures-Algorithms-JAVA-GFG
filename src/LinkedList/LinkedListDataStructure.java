@@ -11,6 +11,7 @@ class Linkedlist { // user defined data structure
     Node head; // null
     Node tail; // null
     int size;
+
     void addAtHead(int val){
         Node temp = new Node(val);
         if(head==null) head = tail = temp;
@@ -48,6 +49,34 @@ class Linkedlist { // user defined data structure
         }
         System.out.println();
     }
+    int get(int idx){
+        Node temp = head;
+        for(int i=1;i<=idx;i++){
+            temp = temp.next;
+        }
+        return temp.val;
+    }
+
+
+    void insert(int val, int idx) {
+        if(idx==0 ||  idx>size){
+            System.out.println("invalid Index");
+            return;
+        }
+        if(idx==0) addAtHead(val);
+        else if(idx==size) addAtTail(val);
+        else{
+            Node temp = head;
+            for (int i = 0; i < idx; i++) {
+                temp=temp.next;
+            }
+            Node t = new Node(val);
+            t.next = temp.next;
+            temp.next = t;
+            size++;
+        }
+    }
+
 
     public static class LinkedListDataStructure {
         public static void main(String[] args) {
@@ -61,9 +90,13 @@ class Linkedlist { // user defined data structure
             ll.addAtHead(100); ll.display();
             ll.deleteAtHead(); ll.display();
             System.out.println("LinkedList Size is:"+ ll.size);
+            ll.insert(45,2); ll.display();
+            System.out.println(ll.get(4));
 
         }
 
 
     }
+
+   
 }
